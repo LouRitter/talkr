@@ -13,6 +13,7 @@ class ShoutsController < ApplicationController
 
   def shout_params
     {content: content_from_params}
+  end 
 
   def content_from_params
     TextShout.new(content_params)
