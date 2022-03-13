@@ -8,6 +8,7 @@ class UsersController < Clearance::UsersController
     @user = User.find(params[:id])
   end
 
+
   private 
 
   def user_params
