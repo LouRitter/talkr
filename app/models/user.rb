@@ -14,4 +14,8 @@ class User < ApplicationRecord
   def liked?(shout)
     liked_shouts.include?(shout)
   end
+
+  def to_param
+   username
+  end
 end
