@@ -41,6 +41,11 @@ class User < ApplicationRecord
     followed_user_ids.include?(user.id)
   end
 
+
+  def timeline_shouts 
+    Shout.where(user_id: followed_user_ids + [id])
+  end
+
   def to_param
    username
   end
