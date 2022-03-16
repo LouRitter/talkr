@@ -6,7 +6,7 @@ class Search
   end
 
   def run 
-    ShoutSearchQueries.new(term: "##{term}").to_relation
+    ShoutSearchQueries.new(term: "#{term}").to_relation
   end 
 
   alias results run
