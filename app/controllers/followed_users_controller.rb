@@ -14,6 +14,6 @@ class FollowedUsersController < ApplicationController
   private 
 
   def find_user
-    @_user = User.find_by(username: params[:id])
+    @_user ||= User.find_by(username: params[:id])
   end
 end
